@@ -1,4 +1,5 @@
 import React from 'react';
+import Form from './Form';
 
 function formatDate(timestamp) {
     const date = new Date(timestamp * 1000);
@@ -58,11 +59,9 @@ class GetPopup extends React.PureComponent {
                             <span></span>
                             <span></span>
                         </button>
-                        <form className="popup__form">
-                            <input name="Name" type="text" className="popup__input" placeholder="Ваше имя"></input>
-                            <input name="Comment" type="text" className="popup__input" placeholder="Ваш комментарий"></input>
-                            <input type="submit" className="popup__input btn" value="Оставить комментарий"></input>
-                        </form>
+                        <Form
+                            id={this.props.id}
+                        />
                     </div>
                 </div>
             )
